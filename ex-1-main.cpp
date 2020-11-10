@@ -14,6 +14,14 @@
 /* -------------------------------------------------------------- */
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 	array[n];
+	for (int i = 0; i++) { 
+		int N = a + i * d;
+		for (int d = 2; d < N; d++) {
+			if (N % d == 0) {
+				N == array[];
+			}
+	  }
+	}
 }
 
 int main() {
