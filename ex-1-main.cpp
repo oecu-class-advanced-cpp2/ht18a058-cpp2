@@ -12,7 +12,10 @@
 * ファイルを作成せよ。
 */
 /* -------------------------------------------------------------- */
-int nth_prime(unsigned int a, unsigned int d, unsigned int n);
+int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
+	array[n];
+}
+
 int main() {
 	std::cout << nth_prime(367, 186, 151) << std::endl;
 	// 以下、同様に、入出力例通りになるか確認せよ。
