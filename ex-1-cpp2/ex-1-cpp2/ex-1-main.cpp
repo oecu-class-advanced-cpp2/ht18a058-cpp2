@@ -28,7 +28,7 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 	int count = 0;
 		for (int i = 0; i < imax; i++) {
 			int N = a + i * d;
-			if (is_prime(N) == true) {
+			if (is_prime(N) == 1) {
 				count += 1;
 			}
 			if (count == n) {
