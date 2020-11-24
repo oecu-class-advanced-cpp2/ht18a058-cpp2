@@ -12,6 +12,17 @@
 * ファイルを作成せよ。
 */
 /* -------------------------------------------------------------- */
+
+bool is_prime(int num) {
+	for (int i = 2; i <= num - 1; i++) {
+		if (num % i == 0) {
+			return false;
+		} {
+			return true;
+		}
+	}
+}
+
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 	int imax = (CPP2_PRIME_UPPER_LIMIT - a) / d + 1;
 	int array[n];
