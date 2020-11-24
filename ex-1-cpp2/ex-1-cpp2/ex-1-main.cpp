@@ -28,7 +28,7 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 	int count = 0;
 		for (int i = 0; i < imax; i++) {
 			int N = a + i * d;
-			if (is_prime(N) == 1) {
+			if (is_prime(N) == true) {
 				count += 1;
 			}
 			if (count == n) {
@@ -42,7 +42,8 @@ int main() {
 	std::cout << nth_prime(367, 186, 151) << std::endl;
 	// 以下、同様に、入出力例通りになるか確認せよ。
 	std::cout << is_prime(149) << std::endl;
-	std::cout << is_prime(150) << std::endl;
+	std::cout << is_prime(3157) << std::endl;
+
 	int hoge;
 	std::cin >> hoge;
 	return 0;
