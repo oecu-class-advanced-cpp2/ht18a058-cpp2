@@ -25,14 +25,15 @@ bool is_prime(int num) {
 
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 	int imax = (CPP2_PRIME_UPPER_LIMIT - a) / d + 1;
-	int array[n];
+	int count = 0;
 	for (int i = 0; i < imax; i++) {
 		int N = a + i * d;
-		for (int d = 2; d < N; d++) {
-			if (N % d == 0) {
-				N == array[];
-			}
-	  }
+		if (is_prime(N) == true) {
+			count += 1;
+		}
+		if (count == n) {
+			return N;
+		}
 	}
 	return 0;
 }
@@ -41,6 +42,7 @@ int main() {
 	std::cout << nth_prime(367, 186, 151) << std::endl;
 	// 以下、同様に、入出力例通りになるか確認せよ。
 	int hoge;
+	nth_prime(367, 186, 151);
 	std::cin >> hoge;
 	return 0;
 }
