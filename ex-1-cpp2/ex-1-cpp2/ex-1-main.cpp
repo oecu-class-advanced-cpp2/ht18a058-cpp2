@@ -17,10 +17,9 @@ bool is_prime(int num) {
 	for (int i = 2; i <= num - 1; i++) {
 		if (num % i == 0) {
 			return false;
-		} {
-			return true;
 		}
 	}
+	return true;
 }
 
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
@@ -41,8 +40,9 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 int main() {
 	std::cout << nth_prime(367, 186, 151) << std::endl;
 	// 以下、同様に、入出力例通りになるか確認せよ。
-	std::cout << is_prime(149) << std::endl;
-	std::cout << is_prime(3157) << std::endl;
+	std::cout << nth_prime(179, 10, 203) << std::endl;
+	std::cout << nth_prime(271, 37, 39) << std::endl;
+	std::cout << nth_prime(1, 1, 1) << std::endl;
 
 	int hoge;
 	std::cin >> hoge;
