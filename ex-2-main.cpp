@@ -9,8 +9,9 @@ namespace cpp2 {
 	/* --------------------------------------------------------------------- */
 	class mcxi {
 	public:
-
+		void mcxi();
 	};
+
 } // namespace cpp2
 
 int main() {
