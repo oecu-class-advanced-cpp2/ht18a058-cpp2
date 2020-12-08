@@ -8,6 +8,7 @@ namespace cpp2 {
 	*/
 	/* --------------------------------------------------------------------- */
 	class mcxi {
+	public:
 
 	};
 } // namespace cpp2
@@ -58,8 +59,8 @@ int main() {
 	auto result8 = a8 + b8;
 	std::cout << "mx" << " " << result8.to_string() << std::endl;
 
-	cpp2::mcxi a5("i");
-	cpp2::mcxi b5("9m9c9x8i");
-	auto result5 = a5 + b5;
-	std::cout << "9m9c9x9i" << " " << result5.to_string() << std::endl;
+	cpp2::mcxi a9("9m8c7xi");
+	cpp2::mcxi b9("c2x8i");
+	cpp2::mcxi result9 = a9 + b9;
+	std::cout << "9m9c9x9i" << " " << result9.to_string() << std::endl;
 }
