@@ -40,30 +40,9 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 		return 0;
 }
 
-void nth_prime_test(unsigned int ans, unsigned int a, unsigned int d, unsigned int n) {
-	int imax = (CPP2_PRIME_UPPER_LIMIT - a) / d + 1;
-	int count = 0;
-	for (int i = 0; i < imax; i++) {
-		int N = a + i * d;
-		if (is_prime(N) == true) {
-			count += 1;
-		}
-		if (count == n) {
-			std::cout << N <<std::endl;
-		}
-		if (N == ans) {
-			std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ð‚Íˆê’v‚µ‚Ü‚µ‚½D" << std::endl;
-		}
-		else {
-			std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ð‚Íˆê’v‚µ‚Ü‚¹‚ñ‚Å‚µ‚½D" << std::endl;
-		}
-	}
-}
-
 int main() {
 	std::cout << nth_prime(367, 186, 151) << std::endl;
 
-	nth_prime_test(92809, 367, 186, 151);
 	int hoge;
 	std::cin >> hoge;
 	return 0;
