@@ -50,12 +50,12 @@ void nth_prime_test(unsigned int ans, unsigned int a, unsigned int d, unsigned i
 		}
 		if (count == n) {
 			std::cout << N <<std::endl;
-			if (N == ans) {
-				std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ğ‚Íˆê’v‚µ‚Ü‚µ‚½D" << std::endl;
-			}
-			else {
-				std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ğ‚Íˆê’v‚µ‚Ü‚¹‚ñ‚Å‚µ‚½D" << std::endl;
-			}
+		}
+		if (N == ans) {
+			std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ğ‚Íˆê’v‚µ‚Ü‚µ‚½D" << std::endl;
+		}
+		else {
+			std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ğ‚Íˆê’v‚µ‚Ü‚¹‚ñ‚Å‚µ‚½D" << std::endl;
 		}
 	}
 }
