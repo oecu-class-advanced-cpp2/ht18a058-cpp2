@@ -41,7 +41,21 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 }
 
 bool nth_prime_test(unsigned int ans, unsigned int a, unsigned int d, unsigned int n) {
-
+	int imax = (CPP2_PRIME_UPPER_LIMIT - a) / d + 1;
+	int count = 0;
+	for (int i = 0; i < imax; i++) {
+		int N = a + i * d;
+		if (is_prime(N) == true) {
+			count += 1;
+		}
+		if (count == n) {
+			return N;
+			if (N = ans) {
+				std::cout << "o—ÍŒ‹‰Ê‚Æ³‰ð‚Íˆê’v‚µ‚Ä‚¢‚Ü‚·D" << std::endl;
+		    }
+		}
+	}
+	return 0;
 }
 
 int main() {
