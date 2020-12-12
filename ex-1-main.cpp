@@ -51,8 +51,8 @@ int main() {
 	std::cout << nth_prime(259, 170, 40) << std::endl;
 	std::cout << nth_prime(269, 58, 102) << std::endl;
 
-	nth_prime_test(92808, 367, 186, 151);
-	nth_prime_test(92809, 367, 186, 151);
+	nth_prime_test(92808, 367, 186, 151); //•sˆê’v‚Ìê‡
+	nth_prime_test(92809, 367, 186, 151); //ˆê’v‚Ìê‡
 
 	int hoge;
 	std::cin >> hoge;
