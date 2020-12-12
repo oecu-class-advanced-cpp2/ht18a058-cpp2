@@ -40,7 +40,7 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 		return 0;
 }
 
-bool nth_prime_test(unsigned int ans, unsigned int a, unsigned int d, unsigned int n) {
+void nth_prime_test(unsigned int ans, unsigned int a, unsigned int d, unsigned int n) {
 	int imax = (CPP2_PRIME_UPPER_LIMIT - a) / d + 1;
 	int count = 0;
 	for (int i = 0; i < imax; i++) {
@@ -49,22 +49,21 @@ bool nth_prime_test(unsigned int ans, unsigned int a, unsigned int d, unsigned i
 			count += 1;
 		}
 		if (count == n) {
-			return N;
-			if (N = ans) {
-				std::cout << "出力結果と正解は一致しています．" << std::endl;
-		    }
+			std::cout << N <<std::endl;
+			if (N == ans) {
+				std::cout << "出力結果と正解は一致しました．" << std::endl;
+			}
+			else {
+				std::cout << "出力結果と正解は一致しませんでした．" << std::endl;
+			}
 		}
 	}
-	return 0;
 }
 
 int main() {
 	std::cout << nth_prime(367, 186, 151) << std::endl;
-	// 以下、同様に、入出力例通りになるか確認せよ。
-	std::cout << nth_prime(179, 10, 203) << std::endl;
-	std::cout << nth_prime(271, 37, 39) << std::endl;
-	std::cout << nth_prime(1, 1, 1) << std::endl;
 
+	nth_prime_test(92809, 367, 186, 151);
 	int hoge;
 	std::cin >> hoge;
 	return 0;
