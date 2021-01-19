@@ -52,18 +52,7 @@ namespace cpp2 {
            現在の値を mcxi 記法に変換します。
          */
         std::string to_string() const {
-            const.value_;
-            int value_ = 2000;
-            int q = value_ / 1000;
-            if (q == 1) {
-                ss << 'm';
-            }
-            if (q > 1) {
-                ss << q;
-                ss << 'm';
-            }
 
-            std::cout << ss.str() << std::endl;
         }
 
     private:
