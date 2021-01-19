@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 namespace cpp2 {
     /*
@@ -52,8 +53,45 @@ namespace cpp2 {
            現在の値を mcxi 記法に変換します。
          */
         std::string to_string() const {
-            std::cout << value_ << std::endl;
-            return 0;
+
+            std::stringstream ss;
+
+            int M = value_ / 1000;
+            if (M == 1) {
+                ss << 'm';
+            }
+            if (M > 1) {
+                ss << M;
+                ss << 'm';
+            }
+
+            int C = value_ - M * 1000;
+            if (C/100 == 1) {
+                ss << 'c';
+            }
+            if (C/100 > 1) {
+                ss << C;
+                ss << 'c';
+            }
+
+            int X = value_ - M*1000 - C*100;
+            if (X/10 == 1) {
+                ss << 'x';
+            }
+            if (X/10 > 1) {
+                ss << X;
+                ss << 'x';
+            }
+
+            int I = value_ - M * 1000 - C * 100 - X*10;
+            if (I == 1) {
+                ss << 'i';
+            }
+            if (I > 1) {
+                ss << I;
+                ss << 'i';
+            }
+            return ss.str();
         }
 
     private:
