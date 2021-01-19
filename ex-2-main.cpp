@@ -33,45 +33,57 @@ namespace cpp2 {
                     digit = 0;
                 }
             }
+        };
+
+        /*
+           operator+
+
+           2 つのオブジェクトの加算結果を取得します。
+         */
+        mcxi operator+(const mcxi& rhs) {
+            mcxi dest(*this);
+            dest.value_ += rhs.value_;
+            return dest;
+        };
+
+        /*
+           to_string
+
+           現在の値を mcxi 記法に変換します。
+         */
+        std::string to_string() const {
+            const.value_;
+            int value_ = 2000;
+            int q = value_ / 1000;
+            if (q == 1) {
+                ss << 'm';
+            }
+            if (q > 1) {
+                ss << q;
+                ss << 'm';
+            }
+
+            std::cout << ss.str() << std::endl;
         }
+
+    private:
+        /*
+           unit
+           単位に対応する値を取得します。
+         */
+        int unit(char c) {
+            switch (c) {
+            case 'm': return 1000;
+            case 'c': return 100;
+            case 'x': return 10;
+            case 'i': return 1;
+            }
+        };
+
+        int value_{
+        };
     };
-
-    /*
-       operator+
-
-       2 つのオブジェクトの加算結果を取得します。
-     */
-    mcxi operator+(const mcxi& rhs) {
-
-    };
-
-    /*
-       to_string
-
-       現在の値を mcxi 記法に変換します。
-     */
-    std::string to_string() const {
-
-    };
-
-private:
-    /*
-       unit
-       単位に対応する値を取得します。
-     */
-    int unit(char c) {
-        switch (c) {
-        case 'm': return 1000;
-        case 'c': return 100;
-        case 'x': return 10;
-        case 'i': return 1;
-        }
-    };
-
-    int value_{
-    };
-}
-} //namespace cpp2
+}//namespace cpp2
 
 int main() {
 	cpp2::mcxi a0("xi");
@@ -97,12 +109,12 @@ int main() {
 	cpp2::mcxi a4("9c9x9i");
 	cpp2::mcxi b4("i");
 	auto result4 = a4 + b4;
-	std::cout << "m" << " " << result4.to_string() << std::endl;
+    std::cout << "m" << " " << result4.to_string() << std::endl;
 
 	cpp2::mcxi a5("i");
 	cpp2::mcxi b5("9m9c9x8i");
 	auto result5 = a5 + b5;
-	std::cout << "9m9c9x9i" << " " << result5.to_string() << std::endl;
+    std::cout << "9m9c9x9i" << " " << result5.to_string() << std::endl;
 
 	cpp2::mcxi a6("m");
 	cpp2::mcxi b6("i");
@@ -117,10 +129,11 @@ int main() {
 	cpp2::mcxi a8("m9i");
 	cpp2::mcxi b8("i");
 	auto result8 = a8 + b8;
-	std::cout << "mx" << " " << result8.to_string() << std::endl;
+    std::cout << "mx" << " " << result8.to_string() << std::endl;
 
 	cpp2::mcxi a9("9m8c7xi");
 	cpp2::mcxi b9("c2x8i");
 	cpp2::mcxi result9 = a9 + b9;
-	std::cout << "9m9c9x9i" << " " << result9.to_string() << std::endl;
+    std::cout << "9m9c9x9i" << " " << result9.to_string() << std::endl;
+
 }
