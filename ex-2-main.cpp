@@ -52,7 +52,8 @@ namespace cpp2 {
            現在の値を mcxi 記法に変換します。
          */
         std::string to_string() const {
-
+            std::cout << value_ << std::endl;
+            return 0;
         }
 
     private:
@@ -125,4 +126,5 @@ int main() {
 	cpp2::mcxi result9 = a9 + b9;
     std::cout << "9m9c9x9i" << " " << result9.to_string() << std::endl;
 
+    std::cin.get();
 }
