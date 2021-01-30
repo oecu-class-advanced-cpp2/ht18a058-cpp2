@@ -55,43 +55,52 @@ namespace cpp2 {
         std::string to_string() const {
 
             std::stringstream ss;
+            int num = 0;
+            num = value_;
+            if (num >= 1000) {
+                int M = num / 1000;
+                if (M == 1) {
+                    ss << 'm';
+                }
+                if (M > 1) {
+                    ss << M;
+                    ss << 'm';
+                }
+                num = num - M * 1000;
+            }
+  
+            if (num >= 100) {
+                int C = num / 100;
+                if (C == 1) {
+                    ss << 'c';
+                }
+                if (C > 1) {
+                    ss << C;
+                    ss << 'c';
+                }
+                num = num - C * 100;
+            }
+            
+            if (num >= 10) {
+                int X = num / 10;
+                if (X == 1) {
+                    ss << 'x';
+                }
+                if (X > 1) {
+                    ss << X;
+                    ss << 'x';
+                }
+                num = num - X * 10;
+            }
 
-            int M = value_ / 1000;
-            if (M == 1) {
-                ss << 'm';
-            }
-            if (M > 1) {
-                ss << M;
-                ss << 'm';
-            }
-
-            int C = value_ - M * 1000;
-            if (C/100 == 1) {
-                ss << 'c';
-            }
-            if (C/100 > 1) {
-                ss << C;
-                ss << 'c';
-            }
-
-            int X = value_ - M*1000 - C*100;
-            if (X/10 == 1) {
-                ss << 'x';
-            }
-            if (X/10 > 1) {
-                ss << X;
-                ss << 'x';
-            }
-
-            int I = value_ - M * 1000 - C * 100 - X*10;
-            if (I == 1) {
-                ss << 'i';
-            }
-            if (I > 1) {
-                ss << I;
-                ss << 'i';
-            }
-            return ss.str();
+            if (num == 1) {
+                    ss << 'i';
+                }
+                if (num > 1) {
+                    ss << num;
+                    ss << 'i';
+                }
+                return ss.str();
         }
 
     private:
